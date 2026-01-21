@@ -1,0 +1,55 @@
+.pageContainer {
+  position: relative;
+  min-height: 100vh;
+}
+
+.featureContainer {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.featureContent {
+  width: 100%;
+  text-align: center;
+}
+
+.featureTextWrapper {
+  width: 200vw;
+  margin-left: -50vw;
+  position: relative;
+  height: 60vh;
+  overflow: hidden;
+}
+
+.featureTextWrapper h1 {
+  white-space: nowrap;
+  margin: 0;
+}
+
+.bText {
+    letter-spacing: 0.113em;
+}
+
+
+.navContainer {
+  position: absolute;
+  left: 22%;
+  top: 68vh;
+  height: 30vh;
+  display: flex;
+  align-items: center;
+}
+
+.navContainer ul {
+  font-family: "stevie-sans", sans-serif;
+  font-size: 22px;
+  text-transform: uppercase;
+  font-weight: 500;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}   
+
+.navContainer ul li {
+  margin-bottom: 16px;
+}
