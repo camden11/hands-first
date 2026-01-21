@@ -1,5 +1,4 @@
 const BASE_LETTER_SPACING = 0.1;
-const FONT_SIZE = 40;
 const NAV_TEXT_REPETITIONS = 10;
 
 export function generateNavText(word: string): string {
@@ -8,7 +7,8 @@ export function generateNavText(word: string): string {
 
 export function calculateLetterSpacing(
   text: string,
-  targetWidth: number
+  targetWidth: number,
+  fontSize: number = 40
 ): number {
   const span = document.createElement('span');
   span.style.cssText = `
@@ -16,7 +16,7 @@ export function calculateLetterSpacing(
     visibility: hidden;
     white-space: nowrap;
     font-family: "stevie-sans", sans-serif;
-    font-size: ${FONT_SIZE}px;
+    font-size: ${fontSize}px;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: ${BASE_LETTER_SPACING}em;
@@ -28,7 +28,7 @@ export function calculateLetterSpacing(
 
   const extraSpace = targetWidth - naturalWidth;
   const extraPerChar = extraSpace / text.length;
-  const extraEm = extraPerChar / FONT_SIZE;
+  const extraEm = extraPerChar / fontSize;
 
   return BASE_LETTER_SPACING + extraEm;
 }

@@ -1,13 +1,19 @@
 import Image from 'next/image';
 import styles from './ReleaseCard.module.css';
 
+interface StreamingLink {
+  label: string;
+  url: string;
+}
+
 interface ReleaseCardProps {
   image: string;
   title: string;
   type: string;
   dateLabel: string;
-  actionLabel: string;
-  actionUrl: string;
+  actionLabel?: string;
+  actionUrl?: string;
+  streamingLinks?: StreamingLink[];
 }
 
 export default function ReleaseCard({
@@ -17,6 +23,7 @@ export default function ReleaseCard({
   dateLabel,
   actionLabel,
   actionUrl,
+  streamingLinks,
 }: ReleaseCardProps) {
   return (
     <article className={styles.card}>
@@ -29,9 +36,25 @@ export default function ReleaseCard({
           <span className={styles.type}>{type}</span>
         </div>
         <p className={styles.date}>{dateLabel}</p>
-        <a href={actionUrl} className={styles.action}>
-          {actionLabel}
-        </a>
+        {streamingLinks && streamingLinks.length > 0 ? (
+          <div className={styles.streamingLinks}>
+            {streamingLinks.map((link) => (
+              <a 
+                key={link.label} 
+                href={link.url} 
+                className={styles.streamingLink} 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                {link.label}
+              </a>
+            ))}
+          </div>
+        ) : actionLabel && actionUrl ? (
+          <a href={actionUrl} className={styles.action}>
+            {actionLabel}
+          </a>
+        ) : null}
       </div>
     </article>
   );

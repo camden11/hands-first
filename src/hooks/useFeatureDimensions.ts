@@ -30,7 +30,7 @@ export function useFeatureDimensions(
 
       setHeight(`${calculatedHeight}px`);
 
-      if (containerWidth === null && containerRef.current) {
+      if (containerRef.current) {
         setContainerWidth(containerRef.current.offsetWidth);
       }
 
@@ -40,7 +40,7 @@ export function useFeatureDimensions(
     updateDimensions();
     window.addEventListener('resize', updateDimensions);
     return () => window.removeEventListener('resize', updateDimensions);
-  }, [textWrapperRef, containerRef, containerWidth]);
+  }, [textWrapperRef, containerRef]);
 
   return { height, containerWidth, isReady };
 }

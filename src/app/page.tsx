@@ -14,12 +14,13 @@ const TITLE_TEXT_B =
 const REPETITIONS = 20;
 
 const NAV_ITEMS = ['Music', 'Shows', 'About'];
-const NAV_IMAGES = ['/mask.png', '/carousel.png', '/mask-2.png'];
+const NAV_IMAGES = ['/mask_cover.png', '/carousel.png', '/mask_cover_2.png'];
 
 export default function Home() {
   const textWrapperRef = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const [activeNavIndex, setActiveNavIndex] = useState(-1);
+  const [fontSize, setFontSize] = useState(40);
 
   const { height, containerWidth, isReady } = useFeatureDimensions(
     textWrapperRef,
@@ -31,7 +32,9 @@ export default function Home() {
 
   const navLetterSpacing = useMemo(() => {
     if (!navItemText || !containerWidth) return null;
-    return calculateLetterSpacing(navItemText, containerWidth);
+    const currentFontSize = window.innerWidth >= 768 ? 40 : 32;
+    setFontSize(currentFontSize);
+    return calculateLetterSpacing(navItemText, containerWidth, currentFontSize);
   }, [navItemText, containerWidth]);
 
   return (

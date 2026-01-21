@@ -49,12 +49,18 @@
 
 .navContainer ul {
   font-family: 'stevie-sans', sans-serif;
-  font-size: 22px;
+  font-size: 18px;
   text-transform: uppercase;
   font-weight: 500;
   list-style: none;
   padding: 0;
   margin: 0;
+}
+
+@media (min-width: 768px) {
+  .navContainer ul {
+    font-size: 22px;
+  }
 }
 
 .navContainer ul li {
@@ -63,4 +69,13 @@
 
 .navContainer ul li a {
   letter-spacing: 0.25em;
+  display: inline-block;
+}
+
+.navContainer ul li:nth-child(1) a {
+  letter-spacing: 0.33em;
+}
+
+.navContainer ul li:nth-child(3) a {
+  letter-spacing: 0.33em;
 }
