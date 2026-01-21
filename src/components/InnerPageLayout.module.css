@@ -8,12 +8,12 @@
 }
 
 .content {
-  padding: 2rem;
+  padding: 1.5rem;
   flex: 1;
 }
 
-@media (max-width: 600px) {
+@media (min-width: 768px) {
   .content {
-    padding: 1.5rem;
+    padding: 3rem;
   }
 }
