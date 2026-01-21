@@ -35,17 +35,21 @@ export default function Home() {
         className={styles.featureContainer}
         style={containerWidth ? { width: `${containerWidth}px` } : undefined}
       >
-        {activeNavIndex >= 0 && (
-          <div className={styles.imageOverlay}>
+        {NAV_IMAGES.map((src, index) => (
+          <div
+            key={src}
+            className={styles.imageOverlay}
+            style={{ opacity: activeNavIndex === index ? 1 : 0 }}
+          >
             <Image
-              src={NAV_IMAGES[activeNavIndex]}
-              alt={NAV_ITEMS[activeNavIndex]}
+              src={src}
+              alt={NAV_ITEMS[index]}
               fill
               style={{ objectFit: 'cover' }}
               priority
             />
           </div>
-        )}
+        ))}
         <div
           ref={textWrapperRef}
           className={styles.featureTextWrapper}
