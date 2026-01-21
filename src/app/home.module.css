@@ -1,29 +1,37 @@
 .pageContainer {
   position: relative;
   min-height: 100vh;
-}
-
-.featureContainer {
-  width: 100%;
   overflow-x: hidden;
 }
 
-.featureContent {
-  width: 100%;
-  text-align: center;
-}
-
-.featureTextWrapper {
-  width: 200vw;
-  margin-left: -50vw;
+.featureContainer {
   position: relative;
-  height: 60vh;
+  width: fit-content;
+  left: 50%;
+  transform: translateX(-50%);
   overflow: hidden;
 }
 
+.imageOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(70vh + 3rem);
+  z-index: 2;
+  pointer-events: none;
+}
+
+.featureTextWrapper {
+  position: relative;
+  height: 60vh;
+  overflow: hidden;
+  z-index: 1;
+}
+
 .featureTextWrapper h1 {
-  white-space: nowrap;
   margin: 0;
+  white-space: nowrap;
 }
 
 .bText {
@@ -34,7 +42,7 @@
 .navContainer {
   position: absolute;
   left: 22%;
-  top: 68vh;
+  top: 67vh;
   height: 30vh;
   display: flex;
   align-items: center;
@@ -52,4 +60,8 @@
 
 .navContainer ul li {
   margin-bottom: 16px;
+}
+
+.navContainer ul li a {
+  letter-spacing: 0.25em;
 }
