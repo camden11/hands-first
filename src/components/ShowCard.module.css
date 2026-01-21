@@ -7,7 +7,7 @@
 .imageWrapper {
   position: relative;
   width: 140px;
-  height: 140px;
+  height: 175px;
   flex-shrink: 0;
 }
 
@@ -33,13 +33,13 @@
   margin: 0;
 }
 
-.type {
+.location {
   font-family: 'stevie-sans', sans-serif;
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 500;
   text-transform: uppercase;
-  letter-spacing: 0.15em;
-  color: #666;
+  letter-spacing: 0.1em;
+  margin: 0;
 }
 
 .date {
@@ -66,32 +66,6 @@
   font-style: italic;
 }
 
-.streamingLinks {
-  font-family: 'stevie-sans', sans-serif;
-  font-size: 12px;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.15em;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  align-items: center;
-  margin-top: 0.5rem;
-}
-
-.listenLabel {
-  text-decoration: none;
-}
-
-.streamingLink {
-  text-decoration: underline;
-  color: #000;
-}
-
-.streamingLink:hover {
-  font-style: italic;
-}
-
 @media (min-width: 768px) {
   .card {
     gap: 2.5rem;
@@ -100,7 +74,7 @@
 
   .imageWrapper {
     width: 220px;
-    height: 220px;
+    height: 275px;
   }
 
   .details {
@@ -115,7 +89,7 @@
     font-size: 32px;
   }
 
-  .type {
+  .location {
     font-size: 16px;
   }
 
@@ -124,11 +98,6 @@
   }
 
   .action {
-    font-size: 16px;
-    margin-top: 0.75rem;
-  }
-
-  .streamingLinks {
     font-size: 16px;
     margin-top: 0.75rem;
   }
@@ -141,12 +110,12 @@
   }
 
   .imageWrapper {
-    width: 250px;
-    height: 250px;
+    width: 240px;
+    height: 300px;
   }
 
   .details {
     align-items: flex-start;
-    width: 250px;
+    width: 240px;
   }
 }

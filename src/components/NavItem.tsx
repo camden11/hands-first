@@ -30,7 +30,7 @@ export default function NavItem({
       onHover(index);
       setTimeout(() => {
         window.location.href = href;
-      }, 100);
+      }, 150);
     }
   };
 
