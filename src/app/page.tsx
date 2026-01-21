@@ -12,7 +12,7 @@ const TITLE_TEXT_B = "FIRST HANDS FIRST HANDS FIRST HANDS FIRST HANDS FIRST HAND
 const REPETITIONS = 20;
 
 const NAV_ITEMS = ['Music', 'Shows', 'About'];
-const NAV_IMAGES = ['/mask.png', '/carousel.png', '/mask.png'];
+const NAV_IMAGES = ['/mask.png', '/carousel.png', '/mask-2.png'];
 
 export default function Home() {
   const textWrapperRef = useRef<HTMLDivElement>(null);
