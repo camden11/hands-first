@@ -1,5 +1,4 @@
-@import url("https://use.typekit.net/qkh0ymw.css");
-@import "tailwindcss";
+@import 'tailwindcss';
 
 :root {
   --background: #ffffff;
@@ -14,11 +13,16 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: "stevie-sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family:
+    'stevie-sans',
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    sans-serif;
 }
 
 h1 {
-  font-family: "stevie-sans", sans-serif;
+  font-family: 'stevie-sans', sans-serif;
   font-size: 40px;
   text-transform: uppercase;
   font-weight: 700;
@@ -26,19 +30,19 @@ h1 {
 }
 
 h2 {
-  font-family: "stevie-sans", sans-serif;
+  font-family: 'stevie-sans', sans-serif;
   text-transform: uppercase;
   font-weight: 700;
 }
 
 h3 {
-  font-family: "stevie-sans", sans-serif;
+  font-family: 'stevie-sans', sans-serif;
   text-transform: uppercase;
   font-weight: 700;
 }
 
 p {
-  font-family: "stevie-sans", sans-serif;
+  font-family: 'stevie-sans', sans-serif;
   text-transform: uppercase;
 }
 

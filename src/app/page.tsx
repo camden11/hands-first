@@ -7,8 +7,10 @@ import NavItem from '../components/NavItem';
 import { generateNavText, calculateLetterSpacing } from '../utils/text';
 import { useFeatureDimensions } from '../hooks/useFeatureDimensions';
 
-const TITLE_TEXT_A = "HANDS FIRST HANDS FIRST HANDS FIRST HANDS FIRST HANDS FIRST HANDS";
-const TITLE_TEXT_B = "FIRST HANDS FIRST HANDS FIRST HANDS FIRST HANDS FIRST HANDS FIRST";
+const TITLE_TEXT_A =
+  'HANDS FIRST HANDS FIRST HANDS FIRST HANDS FIRST HANDS FIRST HANDS';
+const TITLE_TEXT_B =
+  'FIRST HANDS FIRST HANDS FIRST HANDS FIRST HANDS FIRST HANDS FIRST';
 const REPETITIONS = 20;
 
 const NAV_ITEMS = ['Music', 'Shows', 'About'];
@@ -19,9 +21,13 @@ export default function Home() {
   const containerRef = useRef<HTMLDivElement>(null);
   const [activeNavIndex, setActiveNavIndex] = useState(-1);
 
-  const { height, containerWidth, isReady } = useFeatureDimensions(textWrapperRef, containerRef);
+  const { height, containerWidth, isReady } = useFeatureDimensions(
+    textWrapperRef,
+    containerRef
+  );
 
-  const navItemText = activeNavIndex >= 0 ? generateNavText(NAV_ITEMS[activeNavIndex]) : null;
+  const navItemText =
+    activeNavIndex >= 0 ? generateNavText(NAV_ITEMS[activeNavIndex]) : null;
 
   const navLetterSpacing = useMemo(() => {
     if (!navItemText || !containerWidth) return null;
@@ -58,7 +64,10 @@ export default function Home() {
           {Array.from({ length: REPETITIONS }).map((_, index) => {
             if (navItemText && navLetterSpacing !== null) {
               return (
-                <h1 key={index} style={{ letterSpacing: `${navLetterSpacing}em` }}>
+                <h1
+                  key={index}
+                  style={{ letterSpacing: `${navLetterSpacing}em` }}
+                >
                   {navItemText}
                 </h1>
               );

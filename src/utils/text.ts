@@ -6,7 +6,10 @@ export function generateNavText(word: string): string {
   return Array(NAV_TEXT_REPETITIONS).fill(word).join(' ');
 }
 
-export function calculateLetterSpacing(text: string, targetWidth: number): number {
+export function calculateLetterSpacing(
+  text: string,
+  targetWidth: number
+): number {
   const span = document.createElement('span');
   span.style.cssText = `
     position: absolute;

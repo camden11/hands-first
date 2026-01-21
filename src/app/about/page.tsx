@@ -1,7 +1,9 @@
+import InnerPageLayout from '@/components/InnerPageLayout';
+
 export default function About() {
   return (
-    <div>
-      <h1>About</h1>
-    </div>
+    <InnerPageLayout title="ABOUT" href="/about">
+      <p>About content coming soon...</p>
+    </InnerPageLayout>
   );
 }

@@ -35,9 +35,8 @@
 }
 
 .bText {
-    letter-spacing: 0.113em;
+  letter-spacing: 0.113em;
 }
-
 
 .navContainer {
   position: absolute;
@@ -49,14 +48,14 @@
 }
 
 .navContainer ul {
-  font-family: "stevie-sans", sans-serif;
+  font-family: 'stevie-sans', sans-serif;
   font-size: 22px;
   text-transform: uppercase;
   font-weight: 500;
   list-style: none;
   padding: 0;
   margin: 0;
-}   
+}
 
 .navContainer ul li {
   margin-bottom: 16px;

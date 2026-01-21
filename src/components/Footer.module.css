@@ -1,0 +1,33 @@
+.footer {
+  padding: 2rem;
+  margin-top: auto;
+}
+
+.nav {
+  font-family: 'stevie-sans', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  display: flex;
+  justify-content: space-between;
+}
+
+.link {
+  text-decoration: underline;
+  color: inherit;
+}
+
+.link:hover {
+  font-style: italic;
+}
+
+@media (min-width: 768px) {
+  .footer {
+    padding: 3rem;
+  }
+
+  .nav {
+    font-size: 16px;
+  }
+}

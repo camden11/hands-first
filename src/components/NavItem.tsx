@@ -9,7 +9,12 @@ interface NavItemProps {
   onHover: (index: number) => void;
 }
 
-export default function NavItem({ href, index, children, onHover }: NavItemProps) {
+export default function NavItem({
+  href,
+  index,
+  children,
+  onHover,
+}: NavItemProps) {
   const lastPointerType = useRef<string>('mouse');
 
   const handlePointerEnter = (e: PointerEvent) => {

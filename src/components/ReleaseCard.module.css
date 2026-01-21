@@ -1,0 +1,127 @@
+.card {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 140px;
+  height: 140px;
+  flex-shrink: 0;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.4rem;
+}
+
+.titleRow {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+}
+
+.title {
+  font-family: 'stevie-sans', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin: 0;
+}
+
+.type {
+  font-family: 'stevie-sans', sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: #666;
+}
+
+.date {
+  font-family: 'stevie-sans', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin: 0;
+}
+
+.action {
+  font-family: 'stevie-sans', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  text-decoration: underline;
+  color: #000;
+  margin-top: 0.5rem;
+}
+
+.action:hover {
+  font-style: italic;
+}
+
+@media (min-width: 768px) {
+  .card {
+    gap: 2.5rem;
+    margin-bottom: 4rem;
+  }
+
+  .imageWrapper {
+    width: 220px;
+    height: 220px;
+  }
+
+  .details {
+    gap: 0.75rem;
+  }
+
+  .titleRow {
+    gap: 1.5rem;
+  }
+
+  .title {
+    font-size: 36px;
+  }
+
+  .type {
+    font-size: 16px;
+  }
+
+  .date {
+    font-size: 16px;
+  }
+
+  .action {
+    font-size: 16px;
+    margin-top: 0.75rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .imageWrapper {
+    width: 250px;
+    height: 250px;
+  }
+
+  .details {
+    align-items: center;
+  }
+
+  .titleRow {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+  }
+}
