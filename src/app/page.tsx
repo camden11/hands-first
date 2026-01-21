@@ -1,6 +1,6 @@
 'use client';
 
-import { useRef, useState, useMemo } from 'react';
+import { useRef, useState, useMemo, PointerEvent } from 'react';
 import Image from 'next/image';
 import styles from './home.module.css';
 import NavItem from '../components/NavItem';
@@ -72,7 +72,12 @@ export default function Home() {
           })}
         </div>
       </div>
-      <div className={styles.navContainer} onMouseLeave={() => setActiveNavIndex(-1)}>
+      <div
+        className={styles.navContainer}
+        onPointerLeave={(e: PointerEvent) => {
+          if (e.pointerType === 'mouse') setActiveNavIndex(-1);
+        }}
+      >
         <ul>
           <NavItem href="/music" index={0} onHover={setActiveNavIndex}>
             Music

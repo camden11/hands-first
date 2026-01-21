@@ -1,5 +1,7 @@
 'use client';
 
+import { PointerEvent } from 'react';
+
 interface NavItemProps {
   href: string;
   index: number;
@@ -8,9 +10,15 @@ interface NavItemProps {
 }
 
 export default function NavItem({ href, index, children, onHover }: NavItemProps) {
+  const handlePointerEnter = (e: PointerEvent) => {
+    if (e.pointerType === 'mouse') {
+      onHover(index);
+    }
+  };
+
   return (
     <li>
-      <a href={href} onMouseEnter={() => onHover(index)}>
+      <a href={href} onPointerEnter={handlePointerEnter}>
         {children}
       </a>
     </li>
